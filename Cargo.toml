@@ -1,9 +1,25 @@
 [package]
 name = "wasm_keyboard_macros"
 version = "0.1.0"
+authors = ["Dmitrii Demenev <demenev.dmitriy1@gmail.com>"]
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+rust-version = "1.56.1" # https://github.com/foresterre/cargo-msrv/issues/244
+description = "Macros for `wasm_keyboard`."
+documentation = "https://docs.rs/wasm_keyboard_macros"
+readme = "README.md"
+repository = "https://github.com/JohnScience/wasm_keyboard_macros"
+license = "MIT OR Apache-2.0"
+# license-file | not needed
+keywords = ["wasm", "frontend", "keyboard"]
+categories = ["wasm", "web-programming"] # https://crates.io/category_slugs
+# workspace | not needed
+# build | not needed
+# links | not needed
+# exclude | not needed
+autobins = false
+# autoexamples = true
+autotests = false
+autobenches = false
 
 [lib]
 proc-macro = true
