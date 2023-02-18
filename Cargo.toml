@@ -10,7 +10,7 @@ readme = "README.md"
 repository = "https://github.com/JohnScience/wasm_keyboard_macros"
 license = "MIT OR Apache-2.0"
 # license-file | not needed
-keywords = ["wasm", "frontend", "keyboard"]
+keywords = ["wasm", "frontend", "keyboard", "events"]
 categories = ["wasm", "web-programming"] # https://crates.io/category_slugs
 # workspace | not needed
 # build | not needed

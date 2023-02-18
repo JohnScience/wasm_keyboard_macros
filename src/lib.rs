@@ -1,3 +1,5 @@
+#![doc = include_str!("../README.md")]
+
 use proc_macro::TokenStream;
 
 mod key_handlers;
@@ -52,6 +54,14 @@ keydown = {
     }
 },
 ```
+
+## Notes
+
+Notice that unlike [`start_keywise_keyboard_handler!`], both [`new_primitive_key_handler!`] and
+[`new_simplified_key_handler!`] expect a path of type [`KeyboardEventCode`](https://docs.rs/uievents-code/latest/uievents_code/enum.KeyboardEventCode.html)
+(such as `KeyboardEventCode::KeyA`) and not a path of type `&'static str` (such as 
+[`KEY_A`](https://docs.rs/uievents-code/latest/uievents_code/writing_system/constant.KEY_A.html)).
+
 "#
     };
 }
@@ -136,6 +146,15 @@ fn main() -> Result<(), JsValue> {
 /// # Example
 ///
 #[doc = simplified_key_handling_example_doc!()]
+///
+/// ## Notes
+/// 
+/// Notice that even though both [`new_primitive_key_handler!`] and
+/// [`new_simplified_key_handler!`] expect a path of type [`KeyboardEventCode`](https://docs.rs/uievents-code/latest/uievents_code/enum.KeyboardEventCode.html)
+/// (such as 
+/// [`KeyboardEventCode::KeyA`](https://docs.rs/uievents-code/latest/uievents_code/enum.KeyboardEventCode.html#variant.KeyA)),
+/// [`start_keywise_keyboard_handler!`] expects a path of type `&'static str` (such as 
+/// [`KEY_A`](https://docs.rs/uievents-code/latest/uievents_code/writing_system/constant.KEY_A.html)).
 ///
 /// [`web_sys::Document`]: https://docs.rs/web-sys/latest/web_sys/struct.Document.html
 /// [variadic generics]: https://github.com/rust-lang/rust/issues/10124
