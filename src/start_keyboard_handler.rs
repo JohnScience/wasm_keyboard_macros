@@ -169,7 +169,7 @@ impl Args {
                 {
                     let #instance_name = #instance_name.clone();
                     let __handler = ::wasm_bindgen::closure::Closure::<dyn ::core::ops::FnMut(_)>::new::<_>(
-                        move |event: KeyboardEvent| #instance_name.#keyboard_handler_impl_method(&event),
+                        move |event: ::web_sys::KeyboardEvent| #instance_name.#keyboard_handler_impl_method(&event),
                     );
                     #target
                         .add_event_listener_with_callback(
